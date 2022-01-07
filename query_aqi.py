@@ -25,6 +25,13 @@ def tzconvert(timestamp):
 	new_timezone_timestamp = localized_timestamp.astimezone(new_timezone)
 	return(new_timezone_timestamp)
 
+## Print import content and append to local file
+def main(content, date):
+	print(content)
+	f = open("{}.txt".format(date), "a")
+	f.write(content)
+	f.close()
+
 ### API RELATED INFORMATION
 API_KEY = '{{YOUR AIRVISUAL API KEY}}'
 COUNTRY = 'China'
@@ -62,6 +69,7 @@ pollution_hours = time_format(str(tzconvert(pollution_datetime_object)), 1)[1]
 weather_date = time_format(str(tzconvert(weather_datetime_object)), 1)[0]
 weather_hours = time_format(str(tzconvert(weather_datetime_object)), 1)[1]
 
-## Output information retrieved from AirVisual API
-print("({}) Last weather info update: {} {}, Temperature: {}°C, Humidity: {}%, Wind speed: {}m/s, Wind direction: {}°, Atmospheric pressure: {}hPa.".format(CITY, weather_date, weather_hours, weather_tp, weather_hu, weather_ws, weather_wd, weather_pr))
-print("({}) Last pollution info update: {} {}, AQI US: {} with main pollutant: {}, AQI CN: {} with main pollution: {}.".format(CITY, pollution_date, pollution_hours, pollution_aqius, pollution_mainus, pollution_aqicn, pollution_maincn))
+### Print information and save to local with date.txt
+output_print = "({}) Last weather info update: {} {}, Temperature: {}°C, Humidity: {}%, Wind speed: {}m/s, Wind direction: {}°, Atmospheric pressure: {}hPa. \r\n({}) Last pollution info update: {} {}, AQI US: {} with main pollutant: {}, AQI CN: {} with main pollution: {}.\r\n\r\n".format(CITY, weather_date, weather_hours, weather_tp, weather_hu, weather_ws, weather_wd, weather_pr, CITY, pollution_date, pollution_hours, pollution_aqius, pollution_mainus, pollution_aqicn, pollution_maincn)
+if __name__ == "__main__":
+	main(output_print, pollution_date)
