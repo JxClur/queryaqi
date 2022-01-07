@@ -8,7 +8,6 @@ Change the value of the variable 'CITY' if you want it to display the city you i
 ### Retrieve AQI and weather info from AirVisual API
 - Call AirVisual API with requests module
 - Transform string type to dictionary type for the output data with json module
-<br />
 
 ### Time zone conversion
 Because the time zone which AirVisual API uses is UTC, in order to convert it to the time zone we are currently living in, <br />
