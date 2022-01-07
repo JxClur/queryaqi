@@ -28,8 +28,8 @@ def tzconvert(timestamp):
 ### API RELATED INFORMATION
 API_KEY = '{{YOUR AIRVISUAL API KEY}}'
 COUNTRY = 'China'
-STATE = 'Jiangsu'
-CITY = 'Suzhou'
+STATE = 'Shanghai'
+CITY = 'Shanghai'
 URL = 'https://api.airvisual.com/v2/city?city={}&state={}&country={}&key={}'.format(CITY, STATE, COUNTRY, API_KEY)
 
 ### Request AirVisual Data through its API
