@@ -2,7 +2,7 @@
 
 ## Query AQI information
 This script aims to query the AQI information of a city using AirVisual API<br />
-Change the value of the variable 'CITY' if you want it to display the city you interest.<br />
+Change the value of the variable 'CITY' if you want it to display the city you interest.
 
 ## Core idea behind the script
 ### Retrieve AQI and weather info from AirVisual API
