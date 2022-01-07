@@ -26,7 +26,7 @@ def tzconvert(timestamp):
 	return(new_timezone_timestamp)
 
 ### API RELATED INFORMATION
-API_KEY = '{{YOUR AIRVISUAL API KEY}}}'
+API_KEY = '{{YOUR AIRVISUAL API KEY}}'
 COUNTRY = 'China'
 STATE = 'Jiangsu'
 CITY = 'Suzhou'
